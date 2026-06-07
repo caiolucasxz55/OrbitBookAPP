@@ -75,6 +75,14 @@ export interface ChatMessage {
   content: string;
 }
 
+export interface DestinoPage {
+  items: Destino[];
+  total: number;
+  page: number;
+  pages: number;
+  limit: number;
+}
+
 export interface ChatRequest {
   messages: ChatMessage[];
 }
@@ -83,6 +91,22 @@ export interface ChatResponse {
   content: string;
   suggestions: string[];
   recomendacao_id: number | null;
+  destinos_recomendados: Destino[];
+}
+
+export interface AvaliacaoItem {
+  id: number;
+  booking_id: number;
+  nota: number;
+  comentario: string | null;
+  criado_em: string | null;
+  usuario_nome: string | null;
+}
+
+export interface CreateAvaliacaoPayload {
+  booking_id: number;
+  nota: number;
+  comentario?: string;
 }
 
 export interface ApiError {
