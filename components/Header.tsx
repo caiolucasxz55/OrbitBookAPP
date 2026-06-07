@@ -59,17 +59,7 @@ export default function Header() {
           <TouchableOpacity
             style={styles.menuItem}
             onPress={() => {
-              router.push("/destinations");
-              setMenuOpen(false);
-            }}
-          >
-            <Text>Comparar</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.menuItem}
-            onPress={() => {
-              router.push("/assistant");
+              router.push("/ai");
               setMenuOpen(false);
             }}
           >
